@@ -1,0 +1,131 @@
+{
+  "nav": {
+    "brand": "Jorge Bonifaz",
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "projects": "Proyectos",
+    "experience": "Experiencia",
+    "testimonials": "Testimonios",
+    "contact": "Contacto"
+  },
+  "experience": {
+    "title": "Experiencia",
+    "subtitle": "Mi trayectoria profesional y formación.",
+    "work_title": "Experiencia laboral",
+    "education_title": "Formación académica",
+    "certifications_title": "Certificaciones y cursos",
+    "current": "Actual"
+  },
+  "hero": {
+    "greeting": "Hola, soy",
+    "name": "Jorge Bonifaz",
+    "role": "Creo sistemas que ordenan y hacen crecer tu negocio",
+    "tagline": "Ayudo a negocios a dejar atrás los cuadernos, el Excel y el desorden. Construyo sistemas a la medida que ahorran tiempo, evitan errores y no dejan escapar clientes.",
+    "cta_projects": "Ver soluciones",
+    "cta_contact": "Cuéntame tu caso",
+    "cta_cv": "Descargar CV",
+    "available": "Disponible para proyectos"
+  },
+  "stats": {
+    "systems": "Sistemas en producción",
+    "industries": "Rubros distintos",
+    "custom": "Hecho a la medida"
+  },
+  "about": {
+    "title": "Sobre mí",
+    "subtitle": "Un poco de mi historia",
+    "p1": "No hago solo \"páginas web\". Construyo sistemas que resuelven el día a día de un negocio: agendar citas, registrar ventas, controlar inventario y tener toda la información en un solo lugar, accesible desde cualquier dispositivo.",
+    "p2": "Ya llevé a producción sistemas reales para una clínica, una pollería y una empresa de multiservicios. Sé traducir el problema de un negocio en una herramienta simple que la gente realmente usa todos los días.",
+    "skills_title": "Habilidades y tecnologías",
+    "download_cv": "Descargar CV",
+    "location": "Ubicación",
+    "location_value": "Disponible en remoto",
+    "availability": "Disponibilidad",
+    "availability_value": "Freelance / Tiempo completo"
+  },
+  "solutions": {
+    "title": "Soluciones para tu negocio",
+    "subtitle": "¿Tu negocio sigue funcionando con cuadernos, Excel y WhatsApp? Ya resolví ese desorden en distintos rubros. El tuyo puede ser el siguiente.",
+    "for_label": "Ideal para:",
+    "cta": "¿Tu negocio es así? Hablemos",
+    "health_name": "Salud y consultorios",
+    "health_for": "Clínicas, consultorios dentales, veterinarias, centros médicos",
+    "health_desc": "Citas, historiales y pacientes ordenados y a un clic. Sin cruces de horarios ni expedientes perdidos.",
+    "food_name": "Restaurantes y comida",
+    "food_for": "Pollerías, cevicherías, chifas, restaurantes",
+    "food_desc": "Pedidos, ventas y caja bajo control. Menos errores en cocina y reportes para saber qué vender más.",
+    "services_name": "Empresas de servicios",
+    "services_for": "Multiservicios, ferreterías, negocios con inventario",
+    "services_desc": "Clientes, servicios e inventario en un solo lugar, con seguimiento de cada trabajo."
+  },
+  "projects": {
+    "title": "Proyectos",
+    "subtitle": "Sistemas reales, funcionando hoy en negocios de verdad.",
+    "featured": "Proyecto destacado",
+    "all_title": "Todos los proyectos",
+    "view_detail": "Ver caso de estudio",
+    "view_demo": "Ver demo",
+    "view_code": "Ver código",
+    "empty": "Pronto habrá más proyectos aquí.",
+    "filter_all": "Todos",
+    "filter_client": "Clientes",
+    "filter_thesis": "Tesis",
+    "filter_personal": "Propios",
+    "status_live": "En vivo",
+    "status_progress": "En desarrollo",
+    "status_private": "Código privado"
+  },
+  "project_detail": {
+    "back": "Volver a proyectos",
+    "overview": "Resumen",
+    "problem": "El problema",
+    "solution": "La solución",
+    "result": "Resultado",
+    "stack": "Tecnologías usadas",
+    "video": "Video del proyecto",
+    "gallery": "Galería",
+    "links": "Enlaces",
+    "testimonial_title": "Lo que dijo el cliente",
+    "ideal_for": "¿Tienes un negocio parecido?",
+    "ideal_for_text": "Este tipo de sistema también funciona para:",
+    "ideal_cta": "Quiero un sistema así",
+    "not_found": "Proyecto no encontrado."
+  },
+  "testimonials": {
+    "title": "Testimonios",
+    "subtitle": "Lo que dicen mis clientes",
+    "empty": "Aún no hay testimonios."
+  },
+  "contact": {
+    "title": "Contacto",
+    "subtitle": "Cuéntame qué necesita tu negocio y te digo cómo lo resolvemos.",
+    "name": "Nombre",
+    "email": "Correo electrónico",
+    "message": "Mensaje",
+    "send": "Enviar mensaje",
+    "sending": "Enviando...",
+    "success": "¡Mensaje enviado! Te responderé pronto.",
+    "error": "No se pudo enviar el mensaje. Intenta de nuevo o escríbeme directo.",
+    "name_required": "El nombre es obligatorio",
+    "email_required": "El correo es obligatorio",
+    "email_invalid": "Ingresa un correo válido",
+    "message_required": "El mensaje es obligatorio",
+    "or_linkedin": "O escríbeme por",
+    "not_configured": "El formulario aún no está activado. Configura tu Access Key de Web3Forms (ver GUIA-EDICION)."
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados.",
+    "built_with": "Hecho con Angular y Angular Material.",
+    "sections": "Secciones",
+    "social": "Redes"
+  },
+  "notfound": {
+    "title": "Página no encontrada",
+    "message": "La página que buscas no existe o fue movida.",
+    "back_home": "Volver al inicio"
+  },
+  "actions": {
+    "toggle_theme": "Cambiar tema",
+    "toggle_lang": "Cambiar idioma"
+  }
+}

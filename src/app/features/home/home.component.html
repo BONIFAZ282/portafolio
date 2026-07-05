@@ -1,0 +1,121 @@
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-inner">
+    <div class="hero-text">
+      <span class="status-badge">
+        <span class="pulse"></span>
+        {{ 'hero.available' | translate }}
+      </span>
+
+      <p class="greeting">{{ 'hero.greeting' | translate }}</p>
+      <h1 class="name"><span class="gradient-text">{{ 'hero.name' | translate }}</span></h1>
+      <h2 class="role">{{ 'hero.role' | translate }}</h2>
+      <p class="tagline">{{ 'hero.tagline' | translate }}</p>
+
+      <div class="cta">
+        <a mat-flat-button class="btn-glow" routerLink="/proyectos">
+          {{ 'hero.cta_projects' | translate }}
+        </a>
+        <a mat-stroked-button routerLink="/contacto">
+          {{ 'hero.cta_contact' | translate }}
+        </a>
+      </div>
+
+      <div class="stats">
+        <div class="stat">
+          <strong>3+</strong>
+          <span>{{ 'stats.systems' | translate }}</span>
+        </div>
+        <div class="stat">
+          <strong>3</strong>
+          <span>{{ 'stats.industries' | translate }}</span>
+        </div>
+        <div class="stat">
+          <strong>100%</strong>
+          <span>{{ 'stats.custom' | translate }}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-photo">
+      <div class="photo-ring">
+        <img [src]="photoSrc" (error)="onPhotoError()" alt="{{ 'hero.name' | translate }}" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUCIONES POR RUBRO -->
+<section class="section solutions">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">{{ 'solutions.title' | translate }}</span>
+      <h2 class="section-title">{{ 'solutions.title' | translate }}</h2>
+      <p class="section-sub">{{ 'solutions.subtitle' | translate }}</p>
+    </div>
+
+    <div class="solutions-grid">
+      <article
+        class="solution-card glass"
+        *ngFor="let s of solutions; let i = index"
+        appReveal
+        [revealDelay]="i * 120"
+      >
+        <div class="solution-icon"><mat-icon>{{ s.icon }}</mat-icon></div>
+        <h3>{{ 'solutions.' + s.key + '_name' | translate }}</h3>
+        <p class="desc">{{ 'solutions.' + s.key + '_desc' | translate }}</p>
+        <p class="for">
+          <span class="for-label">{{ 'solutions.for_label' | translate }}</span>
+          {{ 'solutions.' + s.key + '_for' | translate }}
+        </p>
+        <a routerLink="/contacto" class="solution-cta">
+          {{ 'solutions.cta' | translate }}
+          <mat-icon>arrow_forward</mat-icon>
+        </a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- PROYECTO DESTACADO -->
+<section class="section" *ngIf="featured">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">{{ 'projects.featured' | translate }}</span>
+      <h2 class="section-title">{{ featured.title }}</h2>
+    </div>
+
+    <article class="featured-card glass" appReveal [routerLink]="['/proyectos', featured.slug]">
+      <div class="featured-media">
+        <img [src]="featured.image" [alt]="featured.title" />
+      </div>
+      <div class="featured-body">
+        <p>{{ featured.summary | localize }}</p>
+        <div class="tags">
+          <app-tech-chip *ngFor="let tag of featured.tags" [name]="tag"></app-tech-chip>
+        </div>
+        <a mat-flat-button class="btn-glow" [routerLink]="['/proyectos', featured.slug]">
+          {{ 'projects.view_detail' | translate }}
+          <mat-icon>arrow_forward</mat-icon>
+        </a>
+      </div>
+    </article>
+
+    <div class="see-all">
+      <a mat-stroked-button routerLink="/proyectos">
+        {{ 'projects.all_title' | translate }}
+        <mat-icon>arrow_forward</mat-icon>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA final -->
+<section class="section closing" appReveal>
+  <div class="container">
+    <h2 class="section-title">{{ 'contact.subtitle' | translate }}</h2>
+    <a mat-flat-button class="btn-glow" routerLink="/contacto">
+      {{ 'hero.cta_contact' | translate }}
+    </a>
+  </div>
+</section>

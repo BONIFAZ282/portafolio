@@ -1,0 +1,44 @@
+.section {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.head {
+  margin-bottom: 2rem;
+}
+
+.head h1 {
+  margin: 0;
+}
+
+.subtitle {
+  opacity: 0.7;
+  margin: 0.25rem 0 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form button {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.direct {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.direct a {
+  color: var(--mat-sys-primary);
+}
+
+.muted {
+  opacity: 0.75;
+}

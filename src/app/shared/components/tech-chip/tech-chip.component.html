@@ -1,0 +1,12 @@
+<span class="tech-chip">
+  <img
+    *ngIf="info.img"
+    [src]="info.img"
+    class="ico"
+    [class.mono]="info.mono"
+    alt=""
+    aria-hidden="true"
+  />
+  <mat-icon *ngIf="info.icon" class="ico mat">{{ info.icon }}</mat-icon>
+  <span class="label">{{ info.label }}</span>
+</span>

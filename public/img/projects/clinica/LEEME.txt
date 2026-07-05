@@ -1,0 +1,22 @@
+Carpeta para las capturas REALES del sistema de la clínica de obstetricia.
+
+Cuando saques las capturas:
+1. Guárdalas aquí (formato .png o .jpg). Sugerencia de nombres:
+   - clinica-agenda.png       (agenda / citas)
+   - clinica-historial.png    (historial del paciente)
+   - clinica-laboratorio.png  (laboratorio / evidencias)
+   - clinica-caja.png         (caja / pagos)
+   - clinica-inventario.png   (inventario)
+
+2. Luego edita: src/app/core/data/projects.data.ts
+   En el proyecto 'clinica-obstetricia':
+   - Cambia "image" por la mejor captura (portada), ej:
+       image: 'img/projects/clinica/clinica-agenda.png',
+   - Y en "gallery" pon las rutas, ej:
+       gallery: [
+         'img/projects/clinica/clinica-historial.png',
+         'img/projects/clinica/clinica-laboratorio.png',
+         'img/projects/clinica/clinica-caja.png',
+       ],
+
+Mientras tanto, la clínica sigue mostrando las imágenes de ejemplo (SVG).

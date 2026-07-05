@@ -1,0 +1,54 @@
+<section class="section">
+  <header class="head">
+    <span class="eyebrow">{{ 'nav.contact' | translate }}</span>
+    <h1 class="section-title">{{ 'contact.title' | translate }}</h1>
+    <p class="subtitle">{{ 'contact.subtitle' | translate }}</p>
+  </header>
+
+  <form class="form" [formGroup]="form" (ngSubmit)="submit()">
+    <mat-form-field appearance="outline">
+      <mat-label>{{ 'contact.name' | translate }}</mat-label>
+      <input matInput formControlName="name" />
+      <mat-error *ngIf="form.controls.name.hasError('required')">
+        {{ 'contact.name_required' | translate }}
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>{{ 'contact.email' | translate }}</mat-label>
+      <input matInput type="email" formControlName="email" />
+      <mat-error *ngIf="form.controls.email.hasError('required')">
+        {{ 'contact.email_required' | translate }}
+      </mat-error>
+      <mat-error *ngIf="form.controls.email.hasError('email')">
+        {{ 'contact.email_invalid' | translate }}
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>{{ 'contact.message' | translate }}</mat-label>
+      <textarea matInput rows="6" formControlName="message"></textarea>
+      <mat-error *ngIf="form.controls.message.hasError('required')">
+        {{ 'contact.message_required' | translate }}
+      </mat-error>
+    </mat-form-field>
+
+    <button mat-flat-button color="primary" type="submit" [disabled]="sending()">
+      <mat-progress-spinner
+        *ngIf="sending()"
+        diameter="20"
+        mode="indeterminate"
+      ></mat-progress-spinner>
+      <span>{{ (sending() ? 'contact.sending' : 'contact.send') | translate }}</span>
+    </button>
+  </form>
+
+  <p class="direct muted">
+    {{ 'contact.or_linkedin' | translate }}
+    <a
+      href="https://www.linkedin.com/in/jorge-armando-bonifaz-campos-a58b741b4"
+      target="_blank"
+      rel="noopener"
+    >LinkedIn</a>
+  </p>
+</section>

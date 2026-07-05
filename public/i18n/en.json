@@ -1,0 +1,131 @@
+{
+  "nav": {
+    "brand": "Jorge Bonifaz",
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "experience": "Experience",
+    "testimonials": "Testimonials",
+    "contact": "Contact"
+  },
+  "experience": {
+    "title": "Experience",
+    "subtitle": "My professional background and education.",
+    "work_title": "Work experience",
+    "education_title": "Education",
+    "certifications_title": "Certifications & courses",
+    "current": "Current"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "name": "Jorge Bonifaz",
+    "role": "I build systems that organize and grow your business",
+    "tagline": "I help businesses leave behind notebooks, spreadsheets and chaos. I build custom systems that save time, prevent mistakes and stop customers from slipping away.",
+    "cta_projects": "See solutions",
+    "cta_contact": "Tell me your case",
+    "cta_cv": "Download CV",
+    "available": "Available for projects"
+  },
+  "stats": {
+    "systems": "Systems in production",
+    "industries": "Different industries",
+    "custom": "Fully custom-built"
+  },
+  "about": {
+    "title": "About me",
+    "subtitle": "A bit of my story",
+    "p1": "I don't just build \"websites\". I build systems that solve a business's day-to-day: scheduling appointments, recording sales, tracking inventory and keeping all the information in one place, accessible from any device.",
+    "p2": "I have already shipped real systems to production for a clinic, a rotisserie restaurant and a multi-services company. I know how to turn a business problem into a simple tool that people actually use every day.",
+    "skills_title": "Skills & technologies",
+    "download_cv": "Download CV",
+    "location": "Location",
+    "location_value": "Available remotely",
+    "availability": "Availability",
+    "availability_value": "Freelance / Full-time"
+  },
+  "solutions": {
+    "title": "Solutions for your business",
+    "subtitle": "Is your business still running on notebooks, spreadsheets and WhatsApp? I've already solved that chaos across different industries. Yours could be next.",
+    "for_label": "Ideal for:",
+    "cta": "Is your business like this? Let's talk",
+    "health_name": "Health & clinics",
+    "health_for": "Clinics, dental offices, veterinaries, medical centers",
+    "health_desc": "Appointments, records and patients organized and one click away. No schedule clashes or lost files.",
+    "food_name": "Restaurants & food",
+    "food_for": "Rotisseries, seafood spots, restaurants",
+    "food_desc": "Orders, sales and cash under control. Fewer kitchen mistakes and reports to know what sells best.",
+    "services_name": "Service companies",
+    "services_for": "Multi-services, hardware stores, inventory-based businesses",
+    "services_desc": "Customers, services and inventory in one place, tracking every job."
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "Real systems, running today in real businesses.",
+    "featured": "Featured project",
+    "all_title": "All projects",
+    "view_detail": "View case study",
+    "view_demo": "View demo",
+    "view_code": "View code",
+    "empty": "More projects coming soon.",
+    "filter_all": "All",
+    "filter_client": "Client",
+    "filter_thesis": "Thesis",
+    "filter_personal": "Personal",
+    "status_live": "Live",
+    "status_progress": "In progress",
+    "status_private": "Private code"
+  },
+  "project_detail": {
+    "back": "Back to projects",
+    "overview": "Overview",
+    "problem": "The problem",
+    "solution": "The solution",
+    "result": "Result",
+    "stack": "Tech stack",
+    "video": "Project video",
+    "gallery": "Gallery",
+    "links": "Links",
+    "testimonial_title": "What the client said",
+    "ideal_for": "Do you have a similar business?",
+    "ideal_for_text": "This kind of system also works for:",
+    "ideal_cta": "I want a system like this",
+    "not_found": "Project not found."
+  },
+  "testimonials": {
+    "title": "Testimonials",
+    "subtitle": "What my clients say",
+    "empty": "No testimonials yet."
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Tell me what your business needs and I'll show you how we solve it.",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send message",
+    "sending": "Sending...",
+    "success": "Message sent! I'll get back to you soon.",
+    "error": "Could not send the message. Try again or email me directly.",
+    "name_required": "Name is required",
+    "email_required": "Email is required",
+    "email_invalid": "Enter a valid email",
+    "message_required": "Message is required",
+    "or_linkedin": "Or message me on",
+    "not_configured": "The form isn’t active yet. Set your Web3Forms Access Key (see GUIA-EDICION)."
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "built_with": "Built with Angular and Angular Material.",
+    "sections": "Sections",
+    "social": "Social"
+  },
+  "notfound": {
+    "title": "Page not found",
+    "message": "The page you are looking for doesn't exist or was moved.",
+    "back_home": "Back to home"
+  },
+  "actions": {
+    "toggle_theme": "Toggle theme",
+    "toggle_lang": "Toggle language"
+  }
+}

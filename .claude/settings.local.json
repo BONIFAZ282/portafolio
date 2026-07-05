@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:stivenatehortua-dev.vercel.app)",
+      "WebFetch(domain:abelportfolio-peach-20.vercel.app)",
+      "WebFetch(domain:portfolio-micaelavazquez.vercel.app)",
+      "WebFetch(domain:mi-portfolio-inky-three.vercel.app)",
+      "PowerShell(npx ng build --configuration development 2>&1)",
+      "Bash(node render.mjs)",
+      "Bash(node -e ' *)",
+      "Bash(npm install *)",
+      "Bash(node extract.mjs)",
+      "Bash(node process.mjs)",
+      "Bash(node process.cjs)",
+      "Bash(node cvtext.cjs)",
+      "Bash(node cvtext.mjs)",
+      "PowerShell(\"ready\")"
+    ]
+  }
+}

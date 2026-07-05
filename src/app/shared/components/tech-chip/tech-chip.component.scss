@@ -1,0 +1,34 @@
+.tech-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.28rem 0.6rem 0.28rem 0.5rem;
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--mat-sys-surface-container-high) 70%, transparent);
+  border: 1px solid var(--mat-sys-outline-variant);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.74rem;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.ico {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  display: block;
+}
+
+.ico.mat {
+  font-size: 16px;
+  color: var(--accent-1);
+}
+
+/* Iconos monocromos oscuros (github, express): se invierten en modo oscuro. */
+body:not(.light-theme) .ico.mono {
+  filter: invert(1) brightness(1.6);
+}
+
+.label {
+  opacity: 0.9;
+}

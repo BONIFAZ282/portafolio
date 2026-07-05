@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="Proyecto">
+  <rect width="800" height="450" fill="#e2e8f0"/>
+  <g fill="#94a3b8">
+    <rect x="320" y="170" width="160" height="110" rx="8"/>
+    <circle cx="360" cy="205" r="14" fill="#cbd5e1"/>
+    <path d="M330 270l45-45 30 30 40-40 45 45z" fill="#cbd5e1"/>
+  </g>
+  <text x="400" y="330" font-family="Roboto, Arial, sans-serif" font-size="22" fill="#64748b" text-anchor="middle">Imagen del proyecto</text>
+</svg>

@@ -1,0 +1,49 @@
+<section class="container section">
+  <header class="head">
+    <span class="eyebrow">{{ 'about.subtitle' | translate }}</span>
+    <h1 class="section-title">{{ 'about.title' | translate }}</h1>
+  </header>
+
+  <div class="about-grid">
+    <div class="bio">
+      <p>{{ 'about.p1' | translate }}</p>
+      <p>{{ 'about.p2' | translate }}</p>
+
+      <div class="quick-facts">
+        <div class="fact">
+          <mat-icon>place</mat-icon>
+          <div>
+            <span class="label">{{ 'about.location' | translate }}</span>
+            <span class="value">{{ 'about.location_value' | translate }}</span>
+          </div>
+        </div>
+        <div class="fact">
+          <mat-icon>schedule</mat-icon>
+          <div>
+            <span class="label">{{ 'about.availability' | translate }}</span>
+            <span class="value">{{ 'about.availability_value' | translate }}</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Coloca tu CV en /public/cv.pdf para que el botón funcione. -->
+      <a mat-flat-button class="btn-glow" href="cv.pdf" download>
+        <mat-icon>download</mat-icon>
+        {{ 'about.download_cv' | translate }}
+      </a>
+    </div>
+
+    <aside class="skills">
+      <span class="eyebrow">{{ 'about.skills_title' | translate }}</span>
+      <div class="skill-cat glass" *ngFor="let cat of skills; let i = index" appReveal [revealDelay]="i * 90">
+        <div class="cat-head">
+          <mat-icon>{{ cat.icon }}</mat-icon>
+          <h3>{{ cat.name | localize }}</h3>
+        </div>
+        <div class="tags">
+          <app-tech-chip *ngFor="let s of cat.skills" [name]="s"></app-tech-chip>
+        </div>
+      </div>
+    </aside>
+  </div>
+</section>

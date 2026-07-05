@@ -1,0 +1,39 @@
+<section class="section">
+  <header class="head">
+    <span class="eyebrow">{{ 'testimonials.subtitle' | translate }}</span>
+    <h1 class="section-title">{{ 'testimonials.title' | translate }}</h1>
+  </header>
+
+  <div class="grid" *ngIf="testimonials.length; else empty">
+    <mat-card class="quote-card" *ngFor="let t of testimonials; let i = index" appReveal [revealDelay]="i * 120">
+      <mat-icon class="quote-mark">format_quote</mat-icon>
+      <p class="quote">{{ t.quote | localize }}</p>
+      <div class="author">
+        <div class="avatar" *ngIf="t.avatar; else initials">
+          <img [src]="t.avatar" [alt]="t.author" />
+        </div>
+        <ng-template #initials>
+          <div class="avatar placeholder"><mat-icon>person</mat-icon></div>
+        </ng-template>
+        <div class="who">
+          <strong>{{ t.author }}</strong>
+          <span>{{ t.role | localize }}<ng-container *ngIf="t.company"> · {{ t.company }}</ng-container></span>
+        </div>
+      </div>
+      <a
+        *ngIf="t.projectSlug"
+        mat-button
+        color="primary"
+        [routerLink]="['/proyectos', t.projectSlug]"
+        class="project-link"
+      >
+        {{ 'projects.view_detail' | translate }}
+        <mat-icon>arrow_forward</mat-icon>
+      </a>
+    </mat-card>
+  </div>
+
+  <ng-template #empty>
+    <p class="muted">{{ 'testimonials.empty' | translate }}</p>
+  </ng-template>
+</section>

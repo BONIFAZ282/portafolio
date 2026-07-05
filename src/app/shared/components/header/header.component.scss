@@ -1,0 +1,89 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: color-mix(in srgb, var(--mat-sys-surface) 72%, transparent);
+  backdrop-filter: blur(14px);
+  color: var(--mat-sys-on-surface);
+  border-bottom: 1px solid var(--mat-sys-outline-variant);
+  gap: 0.25rem;
+  height: 64px;
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 1.15rem;
+  text-decoration: none;
+  color: var(--mat-sys-on-surface);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.15rem;
+}
+
+.brand::before {
+  content: '<';
+  color: var(--accent-1);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.brand::after {
+  content: '/>';
+  color: var(--accent-2);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.nav-desktop {
+  display: flex;
+  gap: 0.15rem;
+}
+
+.nav-desktop a {
+  position: relative;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+}
+
+/* Subrayado animado en el link activo. */
+.nav-desktop a.active {
+  color: var(--accent-1);
+}
+
+.nav-desktop a.active::after {
+  content: '';
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 8px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--accent-grad);
+}
+
+::ng-deep .mat-mdc-menu-item.active {
+  color: var(--accent-1);
+  font-weight: 600;
+}
+
+.lang-code {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.menu-btn {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  .nav-desktop {
+    display: none;
+  }
+  .menu-btn {
+    display: inline-flex;
+  }
+}

@@ -1,0 +1,26 @@
+<article class="project-card glass" [routerLink]="['/proyectos', project.slug]">
+  <div class="thumb">
+    <img [src]="project.image" [alt]="project.title" loading="lazy" />
+    <div class="badges">
+      <span *ngIf="project.featured" class="badge featured">★ {{ 'projects.featured' | translate }}</span>
+      <span *ngIf="statusKey" class="badge status" [class]="'status-' + project.status">
+        <span class="dot"></span>{{ statusKey | translate }}
+      </span>
+    </div>
+  </div>
+
+  <div class="content">
+    <span class="year eyebrow">{{ project.year }}</span>
+    <h3 class="title">{{ project.title }}</h3>
+    <p class="summary">{{ project.summary | localize }}</p>
+
+    <div class="tags">
+      <app-tech-chip *ngFor="let tag of project.tags" [name]="tag"></app-tech-chip>
+    </div>
+
+    <span class="cta">
+      {{ 'projects.view_detail' | translate }}
+      <mat-icon>arrow_forward</mat-icon>
+    </span>
+  </div>
+</article>

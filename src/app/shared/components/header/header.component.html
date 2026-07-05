@@ -1,0 +1,52 @@
+<mat-toolbar class="header">
+  <a routerLink="/" class="brand">{{ 'nav.brand' | translate }}</a>
+
+  <span class="spacer"></span>
+
+  <!-- Navegación en escritorio -->
+  <nav class="nav-desktop">
+    <a
+      *ngFor="let link of links"
+      mat-button
+      [routerLink]="link.path"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: link.exact }"
+    >
+      {{ link.key | translate }}
+    </a>
+  </nav>
+
+  <!-- Acciones -->
+  <button
+    mat-icon-button
+    (click)="language.toggle()"
+    [matTooltip]="'actions.toggle_lang' | translate"
+    class="lang-btn"
+  >
+    <span class="lang-code">{{ language.lang() === 'es' ? 'EN' : 'ES' }}</span>
+  </button>
+
+  <button
+    mat-icon-button
+    (click)="theme.toggle()"
+    [matTooltip]="'actions.toggle_theme' | translate"
+  >
+    <mat-icon>{{ theme.theme() === 'dark' ? 'light_mode' : 'dark_mode' }}</mat-icon>
+  </button>
+
+  <!-- Menú en móvil -->
+  <button mat-icon-button class="menu-btn" [matMenuTriggerFor]="mobileMenu">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <mat-menu #mobileMenu="matMenu">
+    <a
+      *ngFor="let link of links"
+      mat-menu-item
+      [routerLink]="link.path"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: link.exact }"
+    >
+      {{ link.key | translate }}
+    </a>
+  </mat-menu>
+</mat-toolbar>

@@ -1,0 +1,51 @@
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="col">
+      <span class="brand">{{ 'nav.brand' | translate }}</span>
+      <p class="muted">{{ 'hero.tagline' | translate }}</p>
+    </div>
+
+    <div class="col">
+      <h4>{{ 'footer.sections' | translate }}</h4>
+      <a
+        *ngFor="let s of sections"
+        [routerLink]="s.path"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: s.exact }"
+      >
+        {{ s.key | translate }}
+      </a>
+    </div>
+
+    <div class="col">
+      <h4>{{ 'footer.social' | translate }}</h4>
+      <div class="social">
+        <ng-container *ngFor="let item of social">
+          <a
+            *ngIf="item.internal"
+            mat-icon-button
+            [routerLink]="item.internal"
+            [attr.aria-label]="item.label"
+          >
+            <mat-icon>{{ item.icon }}</mat-icon>
+          </a>
+          <a
+            *ngIf="!item.internal"
+            mat-icon-button
+            [href]="item.url"
+            target="_blank"
+            rel="noopener"
+            [attr.aria-label]="item.label"
+          >
+            <mat-icon>{{ item.icon }}</mat-icon>
+          </a>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom muted">
+    <span>© {{ year }} {{ 'nav.brand' | translate }}. {{ 'footer.rights' | translate }}</span>
+    <span>{{ 'footer.built_with' | translate }}</span>
+  </div>
+</footer>

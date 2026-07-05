@@ -1,0 +1,64 @@
+<section class="container section">
+  <header class="head">
+    <span class="eyebrow">{{ 'nav.experience' | translate }}</span>
+    <h1 class="section-title">{{ 'experience.title' | translate }}</h1>
+    <p class="subtitle">{{ 'experience.subtitle' | translate }}</p>
+  </header>
+
+  <!-- EXPERIENCIA LABORAL -->
+  <h2 class="block-title">{{ 'experience.work_title' | translate }}</h2>
+  <div class="timeline">
+    <div class="exp" *ngFor="let exp of experiences; let i = index" appReveal [revealDelay]="i * 90">
+      <div class="avatar" [style.background]="exp.color">{{ exp.initials }}</div>
+      <div class="exp-body">
+        <div class="company-row">
+          <h3 class="company">{{ exp.company }}</h3>
+          <span class="location">{{ exp.location }}</span>
+        </div>
+
+        <div class="role" *ngFor="let role of exp.roles">
+          <div class="role-head">
+            <span class="role-title">{{ role.title | localize }}</span>
+            <span class="period">
+              <span *ngIf="role.current" class="dot"></span>
+              {{ role.period | localize }}
+            </span>
+          </div>
+          <p class="role-desc">{{ role.description | localize }}</p>
+          <div class="tags">
+            <app-tech-chip *ngFor="let t of role.tags" [name]="t"></app-tech-chip>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FORMACIÓN -->
+  <h2 class="block-title">{{ 'experience.education_title' | translate }}</h2>
+  <div class="timeline">
+    <div class="exp" *ngFor="let ed of education" appReveal>
+      <div class="avatar" [style.background]="ed.color">{{ ed.initials }}</div>
+      <div class="exp-body">
+        <div class="company-row">
+          <h3 class="company">{{ ed.institution }}</h3>
+          <span class="location">{{ ed.period }}</span>
+        </div>
+        <span class="role-title">{{ ed.degree | localize }}</span>
+        <p class="role-desc" *ngIf="ed.note">{{ ed.note | localize }}</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CERTIFICACIONES -->
+  <h2 class="block-title">{{ 'experience.certifications_title' | translate }}</h2>
+  <div class="certs">
+    <div class="cert glass" *ngFor="let c of certifications; let i = index" appReveal [revealDelay]="i * 60">
+      <mat-icon>verified</mat-icon>
+      <div class="cert-body">
+        <span class="cert-name">{{ c.name }}</span>
+        <span class="cert-issuer">{{ c.issuer }}</span>
+      </div>
+      <span class="cert-year">{{ c.year }}</span>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,71 @@
+.section {
+  padding: 3.5rem 1.5rem;
+}
+
+.head {
+  margin-bottom: 1.75rem;
+}
+
+.subtitle {
+  opacity: 0.72;
+  margin: 0.5rem 0 0;
+  font-size: 1.05rem;
+  max-width: 640px;
+}
+
+/* Filtros */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 2rem;
+}
+
+.filter-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 1rem;
+  border-radius: 999px;
+  border: 1px solid var(--mat-sys-outline-variant);
+  background: color-mix(in srgb, var(--mat-sys-surface-container) 60%, transparent);
+  color: var(--mat-sys-on-surface);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-pill:hover {
+  border-color: color-mix(in srgb, var(--accent-1) 50%, transparent);
+}
+
+.filter-pill.active {
+  background: var(--accent-grad);
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 6px 20px -8px var(--glow-1);
+}
+
+.filter-pill .count {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  padding: 0.05rem 0.4rem;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.filter-pill:not(.active) .count {
+  background: color-mix(in srgb, var(--accent-1) 15%, transparent);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  gap: 1.5rem;
+}
+
+.muted {
+  opacity: 0.6;
+}

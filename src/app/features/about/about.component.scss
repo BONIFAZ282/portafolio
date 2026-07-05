@@ -1,0 +1,101 @@
+.section {
+  padding: 3.5rem 1.5rem;
+}
+
+.head {
+  margin-bottom: 2.5rem;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.bio p {
+  line-height: 1.8;
+  opacity: 0.88;
+  font-size: 1.05rem;
+}
+
+.quick-facts {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin: 1.75rem 0;
+}
+
+.fact {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.fact mat-icon {
+  color: var(--accent-1);
+}
+
+.fact .label {
+  display: block;
+  font-size: 0.75rem;
+  opacity: 0.6;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.fact .value {
+  display: block;
+  font-weight: 600;
+}
+
+.skills .eyebrow {
+  margin-bottom: 1rem;
+}
+
+.skill-cat {
+  padding: 1.25rem 1.4rem;
+  margin-bottom: 1rem;
+  transition: border-color 0.25s ease;
+}
+
+.skill-cat:hover {
+  border-color: color-mix(in srgb, var(--accent-1) 40%, transparent);
+}
+
+.cat-head {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.85rem;
+}
+
+.cat-head h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.cat-head mat-icon {
+  color: var(--accent-1);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 7px;
+  background: color-mix(in srgb, var(--accent-1) 12%, transparent);
+  border: 1px solid var(--mat-sys-outline-variant);
+}
+
+@media (max-width: 820px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="Portafolio personal">
+  <defs>
+    <linearGradient id="gpf" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8b5cff"/>
+      <stop offset="0.5" stop-color="#6366f1"/>
+      <stop offset="1" stop-color="#22d3ee"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="#0e0e16"/>
+  <rect width="800" height="450" fill="url(#gpf)" opacity="0.12"/>
+  <g transform="translate(210 120)" font-family="JetBrains Mono, monospace" font-size="22" fill="#8b93a7">
+    <text x="0" y="0"><tspan fill="#8b5cff">const</tspan> <tspan fill="#e6e8ee">dev</tspan> = {</text>
+    <text x="34" y="34"><tspan fill="#22d3ee">name</tspan>: <tspan fill="#a5b4fc">'Jorge Bonifaz'</tspan>,</text>
+    <text x="34" y="68"><tspan fill="#22d3ee">stack</tspan>: <tspan fill="#a5b4fc">'Angular 19'</tspan>,</text>
+    <text x="34" y="102"><tspan fill="#22d3ee">open</tspan>: <tspan fill="#8b5cff">true</tspan>,</text>
+    <text x="0" y="136">};</text>
+  </g>
+  <text x="400" y="380" font-family="Space Grotesk, Arial, sans-serif" font-size="26" font-weight="700" fill="#ffffff" text-anchor="middle">Portafolio personal · Angular 19</text>
+</svg>

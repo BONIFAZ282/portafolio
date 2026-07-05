@@ -1,0 +1,103 @@
+<section class="section" *ngIf="project; else notFound">
+  <a mat-button routerLink="/proyectos" class="back">
+    <mat-icon>arrow_back</mat-icon>
+    {{ 'project_detail.back' | translate }}
+  </a>
+
+  <header class="detail-head">
+    <span class="year">{{ project.year }}</span>
+    <h1>{{ project.title }}</h1>
+    <p class="lead">{{ project.summary | localize }}</p>
+
+    <div class="links" *ngIf="project.demoUrl || project.repoUrl">
+      <a *ngIf="project.demoUrl" mat-flat-button color="primary" [href]="project.demoUrl" target="_blank" rel="noopener">
+        <mat-icon>open_in_new</mat-icon> {{ 'projects.view_demo' | translate }}
+      </a>
+      <a *ngIf="project.repoUrl" mat-stroked-button [href]="project.repoUrl" target="_blank" rel="noopener">
+        <mat-icon>code</mat-icon> {{ 'projects.view_code' | translate }}
+      </a>
+    </div>
+  </header>
+
+  <div class="cover">
+    <img [src]="project.image" [alt]="project.title" />
+  </div>
+
+  <!-- Video del proyecto (opcional) -->
+  <div class="video-wrap" *ngIf="project.videoUrl">
+    <h2>{{ 'project_detail.video' | translate }}</h2>
+    <div class="video-frame">
+      <iframe
+        *ngIf="isEmbedVideo; else fileVideo"
+        [src]="embedUrl"
+        title="{{ project.title }}"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+      <ng-template #fileVideo>
+        <video [src]="project.videoUrl" controls></video>
+      </ng-template>
+    </div>
+  </div>
+
+  <div class="body">
+    <h2>{{ 'project_detail.overview' | translate }}</h2>
+    <p>{{ project.description | localize }}</p>
+
+    <h2>{{ 'project_detail.problem' | translate }}</h2>
+    <p>{{ project.problem | localize }}</p>
+
+    <h2>{{ 'project_detail.solution' | translate }}</h2>
+    <p>{{ project.solution | localize }}</p>
+
+    <h2>{{ 'project_detail.result' | translate }}</h2>
+    <p>{{ project.result | localize }}</p>
+
+    <h2>{{ 'project_detail.stack' | translate }}</h2>
+    <div class="stack-chips">
+      <app-tech-chip *ngFor="let tag of project.tags" [name]="tag"></app-tech-chip>
+    </div>
+
+    <ng-container *ngIf="project.gallery?.length">
+      <h2>{{ 'project_detail.gallery' | translate }}</h2>
+      <div class="gallery">
+        <img *ngFor="let img of project.gallery" [src]="img" [alt]="project.title" loading="lazy" />
+      </div>
+    </ng-container>
+  </div>
+
+  <!-- Venta por vertical: a qué otros negocios les sirve -->
+  <aside class="ideal" *ngIf="project.idealFor">
+    <mat-icon class="ideal-icon">lightbulb</mat-icon>
+    <h2>{{ 'project_detail.ideal_for' | translate }}</h2>
+    <p class="ideal-text">{{ 'project_detail.ideal_for_text' | translate }}</p>
+    <p class="ideal-list">{{ project.idealFor | localize }}</p>
+    <a mat-flat-button color="primary" routerLink="/contacto">
+      {{ 'project_detail.ideal_cta' | translate }}
+      <mat-icon>arrow_forward</mat-icon>
+    </a>
+  </aside>
+
+  <!-- Testimonio enlazado al proyecto -->
+  <aside class="testimonial" *ngIf="testimonial">
+    <h2>{{ 'project_detail.testimonial_title' | translate }}</h2>
+    <mat-card class="quote-card">
+      <mat-icon class="quote-mark">format_quote</mat-icon>
+      <p class="quote">{{ testimonial.quote | localize }}</p>
+      <div class="author">
+        <strong>{{ testimonial.author }}</strong>
+        <span>{{ testimonial.role | localize }}<ng-container *ngIf="testimonial.company"> · {{ testimonial.company }}</ng-container></span>
+      </div>
+    </mat-card>
+  </aside>
+</section>
+
+<ng-template #notFound>
+  <section class="section">
+    <p class="muted">{{ 'project_detail.not_found' | translate }}</p>
+    <a mat-flat-button color="primary" routerLink="/proyectos">
+      {{ 'project_detail.back' | translate }}
+    </a>
+  </section>
+</ng-template>

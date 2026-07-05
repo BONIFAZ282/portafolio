@@ -1,0 +1,26 @@
+.notfound {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  gap: 0.5rem;
+}
+
+.notfound h1 {
+  font-size: 6rem;
+  margin: 0;
+  color: var(--mat-sys-primary);
+  line-height: 1;
+}
+
+.notfound h2 {
+  margin: 0;
+}
+
+.notfound p {
+  opacity: 0.75;
+  margin: 0 0 1rem;
+}

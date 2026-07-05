@@ -1,0 +1,189 @@
+@use '@angular/material' as mat;
+
+/* ============================================================
+   TEMA MATERIAL (M3) — primario violeta, acento cyan
+   Tipografía: Space Grotesk (títulos) + Inter (texto)
+   ============================================================ */
+html {
+  color-scheme: dark;
+  @include mat.theme((
+    color: (
+      theme-type: dark,
+      primary: mat.$violet-palette,
+      tertiary: mat.$cyan-palette,
+    ),
+    typography: (
+      brand-family: 'Space Grotesk, sans-serif',
+      plain-family: 'Inter, sans-serif',
+      bold-weight: 700,
+      medium-weight: 600,
+      regular-weight: 400,
+    ),
+    density: 0,
+  ));
+}
+
+/* Tema claro: se activa con la clase .light-theme en el <body>. */
+body.light-theme {
+  color-scheme: light;
+  @include mat.theme((
+    color: (
+      theme-type: light,
+      primary: mat.$violet-palette,
+      tertiary: mat.$cyan-palette,
+    ),
+  ));
+}
+
+/* ============================================================
+   VARIABLES DE ACENTO (gradientes y glows propios)
+   ============================================================ */
+:root {
+  --accent-1: #8b5cff;
+  --accent-2: #22d3ee;
+  --accent-grad: linear-gradient(120deg, #8b5cff 0%, #6366f1 45%, #22d3ee 100%);
+  --glow-1: rgba(139, 92, 255, 0.35);
+  --glow-2: rgba(34, 211, 238, 0.22);
+  --radius: 18px;
+}
+
+/* ============================================================
+   BASE
+   ============================================================ */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', 'Helvetica Neue', sans-serif;
+  color: var(--mat-sys-on-surface);
+  background: var(--mat-sys-surface);
+  transition: background 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+}
+
+/* Fondo oscuro con glows suaves de acento. */
+body:not(.light-theme) {
+  background:
+    radial-gradient(720px 480px at 12% -8%, var(--glow-1), transparent 60%),
+    radial-gradient(760px 520px at 92% 2%, var(--glow-2), transparent 55%),
+    var(--mat-sys-surface);
+  background-attachment: fixed;
+}
+
+/* Fondo claro con tintes muy sutiles. */
+body.light-theme {
+  background:
+    radial-gradient(720px 480px at 12% -8%, rgba(139, 92, 255, 0.10), transparent 60%),
+    radial-gradient(760px 520px at 92% 2%, rgba(34, 211, 238, 0.10), transparent 55%),
+    var(--mat-sys-surface);
+  background-attachment: fixed;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, .brand, .name {
+  font-family: 'Space Grotesk', 'Helvetica Neue', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+::selection {
+  background: rgba(139, 92, 255, 0.35);
+}
+
+/* ============================================================
+   UTILIDADES REUTILIZABLES
+   ============================================================ */
+
+/* Etiqueta pequeña estilo "dev" (monoespaciada, mayúsculas). */
+.eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--accent-1);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.eyebrow::before {
+  content: '';
+  width: 26px;
+  height: 2px;
+  background: var(--accent-grad);
+  border-radius: 2px;
+}
+
+/* Texto con gradiente de acento. */
+.gradient-text {
+  background: var(--accent-grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Tarjeta glass. */
+.glass {
+  background: color-mix(in srgb, var(--mat-sys-surface-container) 70%, transparent);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--mat-sys-outline-variant);
+  border-radius: var(--radius);
+}
+
+/* Contenedor de sección estándar. */
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Encabezado de sección con eyebrow + título. */
+.section-title {
+  font-size: clamp(1.7rem, 4vw, 2.4rem);
+  margin: 0.6rem 0 0;
+  font-weight: 700;
+}
+
+/* Botón primario con gradiente y glow (para <a mat-flat-button class="btn-glow">). */
+.btn-glow.mat-mdc-unelevated-button,
+.btn-glow.mat-mdc-raised-button {
+  background: var(--accent-grad) !important;
+  color: #fff !important;
+  border: none;
+  box-shadow: 0 8px 30px -8px var(--glow-1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-glow.mat-mdc-unelevated-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 40px -6px var(--glow-1);
+}
+
+/* ---- Animación de aparición al hacer scroll (directiva appReveal) ---- */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal.reveal-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
