@@ -171,7 +171,7 @@ export const PROJECTS: Project[] = [
     tags: ['Angular', 'TypeScript', 'SCSS', 'Responsive'],
     gallery: [],
     videoUrl: '',
-    demoUrl: 'https://fetal-prenatalia-iota.vercel.app/',
+    demoUrl: '',
     repoUrl: '',
   },
   {
