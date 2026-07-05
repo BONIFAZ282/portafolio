@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter, map, startWith } from 'rxjs/operators';
+import { inject as injectVercelAnalytics } from '@vercel/analytics';
 import { LanguageService } from './core/services/language.service';
 import { ThemeService } from './core/services/theme.service';
 import { routeAnimations } from './shared/animations/route.animations';
@@ -24,4 +25,9 @@ export class AppComponent {
     map(() => this.router.url),
     startWith(this.router.url),
   );
+
+  constructor() {
+    // Vercel Web Analytics (solo envía datos en producción/Vercel).
+    injectVercelAnalytics();
+  }
 }
