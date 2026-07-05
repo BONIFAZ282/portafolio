@@ -34,8 +34,8 @@
   "about": {
     "title": "About me",
     "subtitle": "A bit of my story",
-    "p1": "I don't just build \"websites\". I build systems that solve a business's day-to-day: scheduling appointments, recording sales, tracking inventory and keeping all the information in one place, accessible from any device.",
-    "p2": "I have already shipped real systems to production for a clinic, a rotisserie restaurant and a multi-services company. I know how to turn a business problem into a simple tool that people actually use every day.",
+    "p1": "I'm a Systems Engineer and software developer. I don't just build \"websites\": I build systems that solve a business's day-to-day — scheduling appointments, recording sales, tracking inventory and keeping all the information in one place, accessible from any device.",
+    "p2": "I work professionally as a developer (Angular, C#, Spring Boot and cloud deployments) and, on the side, I have shipped complete systems to production for a clinic, a restaurant and a services company. I know how to turn a business problem into a simple tool that people actually use every day.",
     "skills_title": "Skills & technologies",
     "download_cv": "Download CV",
     "location": "Location",
