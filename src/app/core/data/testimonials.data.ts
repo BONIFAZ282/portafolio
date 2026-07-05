@@ -7,7 +7,7 @@ import { Testimonial } from '../models';
  */
 export const TESTIMONIALS: Testimonial[] = [
   {
-    author: 'Dra. [Nombre de la doctora]',
+    author: 'Dra. Ariana Oncoy',
     role: {
       es: 'Médico Obstetra',
       en: 'Obstetrician',
