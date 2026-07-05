@@ -16,7 +16,7 @@ export const PROJECTS: Project[] = [
     status: 'private',
     title: 'Sistema de gestión para clínica de obstetricia',
     featured: true,
-    year: 2025,
+    year: 2026,
     image: 'img/projects/clinica/clinica-dashboard.png',
     summary: {
       es: 'Sistema web completo para una clínica de obstetricia: citas, agenda, historiales, laboratorio, inventario, caja, paquetes y counter.',
@@ -59,7 +59,7 @@ export const PROJECTS: Project[] = [
     status: 'private',
     title: 'Sistema de ventas y pedidos para pollería',
     featured: false,
-    year: 2024,
+    year: 2025,
     image: 'img/projects/polleria-cover.png',
     summary: {
       es: 'Sistema para pollería con comanda para mesero y cocinero, pedidos, recetas, inventario, boleta y cobro.',
@@ -101,7 +101,7 @@ export const PROJECTS: Project[] = [
     status: 'private',
     title: 'Sistema de gestión para empresa de multiservicios',
     featured: false,
-    year: 2024,
+    year: 2025,
     image: 'img/projects/multiservicios-cover.png',
     summary: {
       es: 'Sistema para una empresa de multiservicios: creación de equipos, registro de servicios y carga de evidencias de cada trabajo.',
@@ -142,7 +142,7 @@ export const PROJECTS: Project[] = [
     status: 'live',
     title: 'Página web - Fetal Prenatalia',
     featured: false,
-    year: 2025,
+    year: 2026,
     image: 'img/projects/fetal-web.png',
     summary: {
       es: 'Sitio web informativo para la doctora Ariana Oncoy (Fetal Prenatalia): presentación, servicios, contacto y ubicación.',
@@ -180,7 +180,7 @@ export const PROJECTS: Project[] = [
     status: 'live',
     title: 'Este portafolio',
     featured: false,
-    year: 2025,
+    year: 2026,
     image: 'img/projects/portafolio-cover.svg',
     summary: {
       es: 'Mi portafolio personal, hecho desde cero con Angular 19: arquitectura modular, lazy loading, bilingüe y tema claro/oscuro.',
