@@ -51,6 +51,10 @@ const MAP: Record<string, Omit<TechInfo, 'label'>> = {
   spring: { img: 'spring.svg' },
   springboot: { img: 'spring.svg' },
   'spring boot': { img: 'spring.svg' },
+  kotlin: { img: 'kotlin.svg' },
+  azure: { img: 'azure.svg' },
+  redhat: { img: 'redhat.svg' },
+  'red hat': { img: 'redhat.svg' },
 
   // Respaldos con icono de Material (no hay SVG oficial)
   'angular material': { icon: 'widgets' },
@@ -62,6 +66,8 @@ const MAP: Record<string, Omit<TechInfo, 'label'>> = {
   cpanel: { icon: 'dns' },
   backend: { icon: 'dns' },
   frontend: { icon: 'web' },
+  aws: { icon: 'cloud' },
+  'amazon web services': { icon: 'cloud' },
   sql: { icon: 'storage' },
   'bases de datos': { icon: 'storage' },
 };

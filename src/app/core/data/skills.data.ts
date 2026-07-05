@@ -1,25 +1,30 @@
 import { SkillCategory } from '../models';
 
-/** Habilidades por categoría (edítalas con tu stack real). */
+/** Habilidades por categoría (basadas en tu stack real). Edítalas libremente. */
 export const SKILLS: SkillCategory[] = [
   {
     name: { es: 'Frontend', en: 'Frontend' },
     icon: 'devices',
-    skills: ['Angular', 'TypeScript', 'JavaScript', 'HTML5', 'CSS3 / SCSS', 'Angular Material', 'RxJS'],
+    skills: ['Angular', 'React.js', 'TypeScript', 'JavaScript', 'HTML5', 'CSS3 / SCSS', 'Angular Material'],
   },
   {
     name: { es: 'Backend', en: 'Backend' },
     icon: 'dns',
-    skills: ['Node.js', 'REST APIs', 'Express', 'C# / .NET'],
+    skills: ['C# / .NET', 'Spring Boot', 'Kotlin', 'PHP', 'REST API'],
   },
   {
     name: { es: 'Bases de datos', en: 'Databases' },
     icon: 'storage',
-    skills: ['MySQL', 'PostgreSQL', 'SQL Server'],
+    skills: ['SQL Server', 'MySQL', 'PostgreSQL'],
+  },
+  {
+    name: { es: 'Nube y despliegue', en: 'Cloud & deployment' },
+    icon: 'cloud',
+    skills: ['AWS', 'Azure', 'RedHat', 'cPanel'],
   },
   {
     name: { es: 'Herramientas', en: 'Tools' },
     icon: 'build',
-    skills: ['Git', 'GitHub', 'VS Code', 'Postman', 'Figma'],
+    skills: ['Git', 'GitHub', 'Android Studio', 'VS Code', 'Postman', 'Figma'],
   },
 ];
