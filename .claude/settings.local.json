@@ -14,7 +14,9 @@
       "Bash(node process.cjs)",
       "Bash(node cvtext.cjs)",
       "Bash(node cvtext.mjs)",
-      "PowerShell(\"ready\")"
+      "PowerShell(\"ready\")",
+      "WebFetch(domain:hismar.dev)",
+      "WebFetch(domain:carlosquiroz.dev)"
     ]
   }
 }
