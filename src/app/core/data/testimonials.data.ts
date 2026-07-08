@@ -3,7 +3,6 @@ import { Testimonial } from '../models';
 /**
  * Testimonios (en duro por ahora).
  * El testimonio de la doctora ya está enlazado al proyecto de la clínica
- * mediante projectSlug: 'clinica-obstetricia'.
  */
 export const TESTIMONIALS: Testimonial[] = [
   {
