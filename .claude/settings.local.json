@@ -16,7 +16,8 @@
       "Bash(node cvtext.mjs)",
       "PowerShell(\"ready\")",
       "WebFetch(domain:hismar.dev)",
-      "WebFetch(domain:carlosquiroz.dev)"
+      "WebFetch(domain:carlosquiroz.dev)",
+      "WebFetch(domain:jcalbarracin.vercel.app)"
     ]
   }
 }

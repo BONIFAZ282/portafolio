@@ -1,4 +1,4 @@
-import { SkillCategory } from '../models';
+import { Localized, SkillCategory } from '../models';
 
 /** Habilidades por categoría (basadas en tu stack real). Edítalas libremente. */
 export const SKILLS: SkillCategory[] = [
@@ -27,4 +27,14 @@ export const SKILLS: SkillCategory[] = [
     icon: 'build',
     skills: ['Git', 'GitHub', 'Android Studio', 'VS Code', 'Postman', 'Figma'],
   },
+];
+
+/** Habilidades blandas. */
+export const SOFT_SKILLS: Localized[] = [
+  { es: 'Trabajo en equipo', en: 'Teamwork' },
+  { es: 'Comunicación asertiva', en: 'Assertive communication' },
+  { es: 'Resolución de problemas', en: 'Problem solving' },
+  { es: 'Proactividad', en: 'Proactivity' },
+  { es: 'Autogestión y autonomía', en: 'Self-management & autonomy' },
+  { es: 'Adaptabilidad al cambio', en: 'Adaptability to change' },
 ];

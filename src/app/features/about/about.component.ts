@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { SKILLS } from '../../core/data/skills.data';
-import { SkillCategory } from '../../core/models';
+import { SKILLS, SOFT_SKILLS } from '../../core/data/skills.data';
+import { Localized, SkillCategory } from '../../core/models';
 
 @Component({
   selector: 'app-about',
@@ -10,4 +10,5 @@ import { SkillCategory } from '../../core/models';
 })
 export class AboutComponent {
   readonly skills: SkillCategory[] = SKILLS;
+  readonly softSkills: Localized[] = SOFT_SKILLS;
 }

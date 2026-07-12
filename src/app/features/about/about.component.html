@@ -46,4 +46,20 @@
       </div>
     </aside>
   </div>
+
+  <!-- Habilidades blandas -->
+  <div class="soft">
+    <span class="eyebrow">{{ 'about.soft_skills_title' | translate }}</span>
+    <div class="soft-grid">
+      <div
+        class="soft-item glass"
+        *ngFor="let s of softSkills; let i = index"
+        appReveal
+        [revealDelay]="i * 70"
+      >
+        <span class="soft-num">{{ (i + 1) | number: '2.0-0' }}</span>
+        <span class="soft-name">{{ s | localize }}</span>
+      </div>
+    </div>
+  </div>
 </section>

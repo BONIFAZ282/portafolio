@@ -24,6 +24,12 @@ export class HomeComponent {
     { icon: 'handyman', key: 'services' },
   ];
 
+  /** Tecnologías que se muestran en el marquee animado. */
+  readonly marqueeTechs: string[] = [
+    'Angular', 'TypeScript', 'JavaScript', 'C#', '.NET', 'Java', 'Spring Boot',
+    'Kotlin', 'React.js', 'SQL Server', 'MySQL', 'PostgreSQL', 'AWS', 'Azure', 'Git',
+  ];
+
   /** Foto de perfil. Guarda tu foto en public/img/profile.jpg y aparecerá aquí.
    *  Mientras no exista, se muestra un placeholder. */
   photoSrc = 'img/profile.jpg';
