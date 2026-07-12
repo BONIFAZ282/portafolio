@@ -68,10 +68,12 @@
 </section>
 
 <!-- MARQUEE DE TECNOLOGÍAS -->
-<div class="tech-marquee" aria-hidden="true">
-  <div class="marquee-track">
-    <app-tech-chip *ngFor="let t of marqueeTechs" [name]="t"></app-tech-chip>
-    <app-tech-chip *ngFor="let t of marqueeTechs" [name]="t"></app-tech-chip>
+<div class="container">
+  <div class="tech-marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <app-tech-chip *ngFor="let t of marqueeTechs" [name]="t"></app-tech-chip>
+      <app-tech-chip *ngFor="let t of marqueeTechs" [name]="t"></app-tech-chip>
+    </div>
   </div>
 </div>
 
