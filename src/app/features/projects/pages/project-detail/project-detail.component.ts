@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit, signal } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { ProjectService } from '../../../../core/services/project.service';
@@ -18,6 +18,22 @@ export class ProjectDetailComponent implements OnInit {
   isEmbedVideo = false;
   /** URL segura para el iframe del video incrustado. */
   embedUrl?: SafeResourceUrl;
+
+  /** Imagen ampliada en el lightbox (null = cerrado). */
+  readonly lightboxImage = signal<string | null>(null);
+
+  openLightbox(img: string): void {
+    this.lightboxImage.set(img);
+  }
+
+  closeLightbox(): void {
+    this.lightboxImage.set(null);
+  }
+
+  @HostListener('document:keydown.escape')
+  onEscape(): void {
+    this.closeLightbox();
+  }
 
   constructor(
     private route: ActivatedRoute,

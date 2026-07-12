@@ -18,4 +18,12 @@ export class ProjectCardComponent {
     const map = { live: 'status_live', 'in-progress': 'status_progress', private: 'status_private' };
     return `projects.${map[this.project.status]}`;
   }
+
+  /** Si la imagen no existe, muestra un placeholder en vez de una imagen rota. */
+  onImgError(event: Event): void {
+    const img = event.target as HTMLImageElement;
+    if (!img.src.endsWith('placeholder.svg')) {
+      img.src = 'img/projects/placeholder.svg';
+    }
+  }
 }

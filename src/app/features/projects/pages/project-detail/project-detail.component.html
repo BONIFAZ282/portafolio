@@ -62,7 +62,14 @@
     <ng-container *ngIf="project.gallery?.length">
       <h2>{{ 'project_detail.gallery' | translate }}</h2>
       <div class="gallery">
-        <img *ngFor="let img of project.gallery" [src]="img" [alt]="project.title" loading="lazy" />
+        <img
+          *ngFor="let img of project.gallery"
+          [src]="img"
+          [alt]="project.title"
+          loading="lazy"
+          class="gallery-img"
+          (click)="openLightbox(img)"
+        />
       </div>
     </ng-container>
   </div>
@@ -92,6 +99,12 @@
     </mat-card>
   </aside>
 </section>
+
+<!-- Lightbox: imagen ampliada de la galería -->
+<div class="lightbox" *ngIf="lightboxImage() as img" (click)="closeLightbox()">
+  <button class="lightbox-close" aria-label="Cerrar">&times;</button>
+  <img [src]="img" alt="" (click)="$event.stopPropagation()" />
+</div>
 
 <ng-template #notFound>
   <section class="section">

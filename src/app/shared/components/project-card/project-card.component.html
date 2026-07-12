@@ -1,6 +1,6 @@
 <article class="project-card glass" [routerLink]="['/proyectos', project.slug]">
   <div class="thumb">
-    <img [src]="project.image" [alt]="project.title" loading="lazy" />
+    <img [src]="project.image" [alt]="project.title" loading="lazy" (error)="onImgError($event)" />
     <div class="badges">
       <span *ngIf="project.featured" class="badge featured">★ {{ 'projects.featured' | translate }}</span>
       <span *ngIf="statusKey" class="badge status" [class]="'status-' + project.status">

@@ -208,4 +208,46 @@ export const PROJECTS: Project[] = [
     demoUrl: '',
     repoUrl: '',
   },
+  {
+    slug: 'sumaq-landing',
+    type: 'personal',
+    status: 'live',
+    title: 'Sumaq — Landing de café de especialidad',
+    featured: false,
+    year: 2026,
+    image: 'img/projects/sumaq/hero.png',
+    summary: {
+      es: 'Landing page cinematográfica para una marca de café de especialidad peruano, con animaciones al scroll y un diseño premium.',
+      en: 'Cinematic landing page for a Peruvian specialty coffee brand, with scroll animations and a premium design.',
+    },
+    description: {
+      es: 'Landing page de alto nivel visual construida en Angular como ejercicio de frontend premium: navbar dinámico con blur al scrollear, hero a pantalla completa con animación escalonada, grid de productos guiado por datos y animaciones al scroll con GSAP + ScrollTrigger. Totalmente responsive (mobile-first, sin frameworks CSS) y optimizada para SEO.',
+      en: 'A visually high-end landing page built in Angular as a premium frontend exercise: dynamic navbar with blur on scroll, full-screen hero with staggered animation, data-driven product grid and scroll animations with GSAP + ScrollTrigger. Fully responsive (mobile-first, no CSS frameworks) and SEO-optimized.',
+    },
+    problem: {
+      es: 'Quería demostrar mis habilidades de frontend visual de alto nivel: animaciones fluidas, diseño premium y rendimiento, sin depender de frameworks de CSS ni de plantillas.',
+      en: 'I wanted to showcase high-end visual frontend skills: smooth animations, premium design and performance, without relying on CSS frameworks or templates.',
+    },
+    solution: {
+      es: 'Construí la landing con Angular (standalone components), un design system propio con tokens de color (regla 60-30-10) y tipografía fluida con clamp(), animaciones con GSAP mediante una directiva reutilizable, optimización de imágenes a WebP (de ~13 MB a <500 KB, -97%) y prerender para SEO.',
+      en: 'I built the landing with Angular (standalone components), a custom design system with color tokens (60-30-10 rule) and fluid typography using clamp(), GSAP animations via a reusable directive, WebP image optimization (~13 MB to <500 KB, -97%) and prerender for SEO.',
+    },
+    result: {
+      es: 'Un resultado sólido en Lighthouse: Rendimiento 91, Accesibilidad 100, Buenas prácticas 100 y SEO 92. Una pieza que demuestra criterio técnico y atención al detalle.',
+      en: 'A solid Lighthouse result: Performance 91, Accessibility 100, Best Practices 100 and SEO 92. A piece that shows technical judgment and attention to detail.',
+    },
+    idealFor: {
+      es: 'Cafeterías, restaurantes, marcas y emprendimientos que necesiten una landing page moderna, rápida y con impacto visual.',
+      en: 'Cafés, restaurants, brands and startups that need a modern, fast landing page with visual impact.',
+    },
+    tags: ['Angular', 'TypeScript', 'SCSS', 'GSAP', 'Responsive'],
+    gallery: [
+      'img/projects/sumaq/productos.png',
+      'img/projects/sumaq/historia.png',
+      'img/projects/sumaq/lighthouse.png',
+    ],
+    videoUrl: '',
+    demoUrl: 'https://sumaq-landing.vercel.app',
+    repoUrl: 'https://github.com/BONIFAZ282/sumaq-landing',
+  },
 ];

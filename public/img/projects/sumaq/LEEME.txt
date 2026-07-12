@@ -1,0 +1,12 @@
+Capturas del proyecto Sumaq (landing de café).
+
+Copia las 4 imágenes desde la carpeta "screenshots/" de tu repo de Sumaq a ESTA carpeta,
+con estos nombres exactos (ya están enlazados en projects.data.ts):
+
+  - hero.png         -> portada de la tarjeta
+  - productos.png    -> galería
+  - historia.png     -> galería
+  - lighthouse.png   -> galería
+
+IMPORTANTE: después de copiarlas, si el servidor (npm start) está corriendo, reinícialo
+(Ctrl+C y npm start) porque Angular escanea la carpeta public/ solo al arrancar.
